@@ -1,0 +1,41 @@
+[project]
+name = "pybrightness"
+dynamic = ["version"]
+description = "Python module to modify screen brightness on Linux, Windows and macOS"
+readme = "README.md"
+authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
+]
+keywords = ["pybrightness", "display-settings", "brightness-control"]
+requires-python = ">=3"
+dependencies = [
+    "python-dotenv>=0.21.0"
+]
+
+[tool.setuptools]
+packages = ["pybrightness"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pybrightness.version"}
+
+[build-system]
+requires      = ["setuptools", "wheel", "python-dotenv>=0.21.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pre-commit"]
+
+[project.urls]
+Homepage = "https://github.com/thevickypedia/pybrightness"
+Docs = "https://thevickypedia.github.io/pybrightness/"
+Source = "https://github.com/thevickypedia/pybrightness"
+"Bug Tracker" = "https://github.com/thevickypedia/pybrightness/issues"
+"Release Notes" = "https://github.com/thevickypedia/pybrightness/blob/main/release_notes.rst"
