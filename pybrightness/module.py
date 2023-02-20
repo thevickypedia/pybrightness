@@ -14,7 +14,7 @@ class Settings:
 
     """
 
-    operating_system: str = platform.system()
+    operating_system = str(platform.system())
     root_password: AnyStr = os.environ.get('ROOT_PASSWORD') or os.environ.get('root_password')
     if operating_system not in ("Linux", "Darwin", "Windows"):
         raise OSError(
