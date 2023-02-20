@@ -21,7 +21,7 @@ def eval_linux() -> NoReturn:
         )
 
 
-def increase() -> NoReturn:
+def increase_max() -> NoReturn:
     """Increases the brightness to maximum."""
     if settings.operating_system == "Darwin":
         for _ in range(32):
@@ -33,7 +33,7 @@ def increase() -> NoReturn:
         os.system("echo %s | sudo -S brightnessctl s 100 > /dev/null" % settings.root_password)
 
 
-def decrease() -> NoReturn:
+def decrease_min() -> NoReturn:
     """Decreases the brightness to minimum."""
     if settings.operating_system == "Darwin":
         for _ in range(32):
@@ -45,7 +45,7 @@ def decrease() -> NoReturn:
         os.system("echo %s | sudo -S brightnessctl s 0 > /dev/null" % settings.root_password)
 
 
-def custom(percent: int = 50) -> NoReturn:
+def custom_level(percent: int = 50) -> NoReturn:
     """Set brightness to a custom level.
 
     - | Since package uses in-built apple script (for macOS), the only way to achieve this is to set the
