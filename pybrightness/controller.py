@@ -1,11 +1,13 @@
+"""Parent module to control brightness."""
+
 import os
 import subprocess
 from typing import NoReturn
 
 from .module import settings
 
-
 POWERSHELL = '(Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,' + '{l}' + ')'
+OS_ERROR = OSError("Package is unsupported in %s" % settings.operating_system)
 
 
 def eval_linux() -> NoReturn:
@@ -31,6 +33,8 @@ def increase() -> NoReturn:
     elif settings.operating_system == "Linux":
         eval_linux()
         os.system("echo %s | sudo -S brightnessctl s 100 > /dev/null" % settings.root_password)
+    else:
+        raise OS_ERROR
 
 
 def decrease() -> NoReturn:
@@ -43,6 +47,8 @@ def decrease() -> NoReturn:
     elif settings.operating_system == "Linux":
         eval_linux()
         os.system("echo %s | sudo -S brightnessctl s 0 > /dev/null" % settings.root_password)
+    else:
+        raise OS_ERROR
 
 
 def custom(percent: int = 50) -> NoReturn:
@@ -63,3 +69,5 @@ def custom(percent: int = 50) -> NoReturn:
     elif settings.operating_system == "Linux":
         eval_linux()
         os.system("echo %s | sudo -S brightnessctl s %d > /dev/null" % (settings.root_password, percent))
+    else:
+        raise OS_ERROR

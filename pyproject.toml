@@ -35,7 +35,6 @@ dev = ["pre-commit"]
 
 [project.urls]
 Homepage = "https://github.com/thevickypedia/pybrightness"
-Docs = "https://thevickypedia.github.io/pybrightness/"
 Source = "https://github.com/thevickypedia/pybrightness"
 "Bug Tracker" = "https://github.com/thevickypedia/pybrightness/issues"
 "Release Notes" = "https://github.com/thevickypedia/pybrightness/blob/main/release_notes.rst"

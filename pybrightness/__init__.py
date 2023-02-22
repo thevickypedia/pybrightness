@@ -1,5 +1,5 @@
 """Place holder for package."""
 
-from .controller import increase, decrease, custom, settings
+from .controller import custom, decrease, increase, settings  # noqa: F401
 
-version = "0.0.3"
+version = "0.0.4"
