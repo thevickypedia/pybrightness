@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+0.0.5 (08/29/2023)
+------------------
+- Includes some minor modifications in type hinting
+
 0.0.4 (02/22/2023)
 ------------------
 - Evaluate supported `operating-system` at function level
@@ -12,11 +16,3 @@ Release Notes
 ------------------
 - Get application ready for usage
 - Add LICENSE and pyrpoject.toml for pypi upload
-
-0.0.2 (02/11/2023)
-------------------
-- Add `.gitignore` and `python-publish.yml`
-
-0.0.1 (02/11/2023)
-------------------
-- Initial commit

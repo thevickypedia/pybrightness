@@ -21,12 +21,12 @@ pybrightness.custom(percent=72)  # Set to a custom level
 ## [Release Notes](https://github.com/thevickypedia/pybrightness/blob/main/release_notes.rst)
 **Requirement**
 ```shell
-python -m pip install changelog-generator
+python -m pip install gitverse
 ```
 
 **Usage**
 ```shell
-changelog reverse -f release_notes.rst -t 'Release Notes'
+gitverse-release reverse -f release_notes.rst -t 'Release Notes'
 ```
 
 ## Pypi Package
