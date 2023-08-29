@@ -2,7 +2,6 @@
 
 import os
 import subprocess
-from typing import NoReturn
 
 from .module import settings
 
@@ -10,7 +9,7 @@ POWERSHELL = '(Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMeth
 OS_ERROR = OSError("Package is unsupported in %s" % settings.operating_system)
 
 
-def eval_linux() -> NoReturn:
+def eval_linux() -> None:
     """Evaluate root password for Linux.
 
     Raises:
@@ -23,7 +22,7 @@ def eval_linux() -> NoReturn:
         )
 
 
-def increase() -> NoReturn:
+def increase() -> None:
     """Increases the brightness to maximum."""
     if settings.operating_system == "Darwin":
         for _ in range(32):
@@ -37,7 +36,7 @@ def increase() -> NoReturn:
         raise OS_ERROR
 
 
-def decrease() -> NoReturn:
+def decrease() -> None:
     """Decreases the brightness to minimum."""
     if settings.operating_system == "Darwin":
         for _ in range(32):
@@ -51,7 +50,7 @@ def decrease() -> NoReturn:
         raise OS_ERROR
 
 
-def custom(percent: int = 50) -> NoReturn:
+def custom(percent: int = 50) -> None:
     """Set brightness to a custom level.
 
     - | Since package uses in-built apple script (for macOS), the only way to achieve this is to set the
