@@ -17,7 +17,7 @@ classifiers = [
 keywords = ["pybrightness", "display-settings", "brightness-control"]
 requires-python = ">=3"
 dependencies = [
-    "python-dotenv>=0.21.0"
+    'python-dotenv>=0.21.0; platform_system=="Linux"'
 ]
 
 [tool.setuptools]
