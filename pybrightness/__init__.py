@@ -2,4 +2,4 @@
 
 from .controller import custom, decrease, increase, settings  # noqa: F401
 
-version = "0.5"
+version = "0.5.1"

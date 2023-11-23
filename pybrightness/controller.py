@@ -37,7 +37,7 @@ def increase(logger: logging.Logger = None) -> None:
     """Increases the brightness to maximum."""
     settings.logger = logger
     if settings.operating_system == "Darwin":
-        for _ in range(32):
+        for _ in range(16):
             _run(commands.MAC_INCREASE)
     elif settings.operating_system == "Windows":
         _run(["powershell", commands.WINDOWS.format(l=100)])
@@ -52,7 +52,7 @@ def decrease(logger: logging.Logger = None) -> None:
     """Decreases the brightness to minimum."""
     settings.logger = logger
     if settings.operating_system == "Darwin":
-        for _ in range(32):
+        for _ in range(16):
             _run(commands.MAC_DECREASE)
     elif settings.operating_system == "Windows":
         _run(["powershell", commands.WINDOWS.format(l=0)])
@@ -77,7 +77,7 @@ def custom(percent: int, logger: logging.Logger = None) -> None:
     assert isinstance(percent, int) and 0 <= percent <= 100, "value should be an integer between 0 and 100"
     if settings.operating_system == "Darwin":
         decrease()
-        for _ in range(round((32 * int(percent)) / 100)):
+        for _ in range(round((16 * int(percent)) / 100)):
             _run(commands.MAC_INCREASE)
     elif settings.operating_system == "Windows":
         _run(["powershell", commands.WINDOWS.format(l=percent)])
