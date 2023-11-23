@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+v0.5.1 (11/22/2023)
+-------------------
+- Includes a bug fix for loops in macOS
+
 0.5 (11/22/2023)
 ----------------
 - Includes optional logging to trace errors
