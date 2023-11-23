@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.5 (11/22/2023)
+----------------
+- Includes optional logging to trace errors
+- Removes default value for custom level
+- Includes some stability improvements
+
 0.0.5 (08/29/2023)
 ------------------
 - Includes some minor modifications in type hinting
